@@ -1,0 +1,27 @@
+WEB-INF
+	|----- classes   [src/main/java/src/main/resources]
+				|----- com
+						|----- douzone
+									|----- app
+									|		|----- DBConfig.class
+									|		|----- MyBatisConfig.class
+									|		|----- /mybatis
+									|		|			|----- configuration.xml
+									|		|			|----- /mappers
+									|		|						|----- user.xml
+									|		|						|----- board.xml
+									|		|						|----- guestbook.xml
+									|		|						|----- gallery.xml
+									|		|						|----- site.xml
+									|		|----- /properties
+									|					|----- jdbc.properties
+									|
+									|----- web
+									|		|----- MCConfig.class
+									|		|----- SecurityConfig.class
+									|		|----- MessagesConfig.class
+									|		|----- FileUploadConfig.cladd
+									|		|----- /messages
+									|		|			|----- message_ko.properties 
+									|		|----- /properties
+									|					|----- multipart.properties
