@@ -13,7 +13,6 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.servlet.NoHandlerFoundException;
 
 import com.douzone.dto.JSONResult;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -22,19 +21,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class GlobalExceptionHandler {
 	
 	private static final Log LOG = LogFactory.getLog( GlobalExceptionHandler.class );
-	
-	@ExceptionHandler(NoHandlerFoundException.class)
-	public void handlerNoHandlerFoundException(
-			HttpServletRequest request,
-			HttpServletResponse response,
-			NoHandlerFoundException ex) throws ServletException, IOException {
-		
-		System.out.println("NoHandlerFoundException");
-		
-		request.
-		getRequestDispatcher("/WEB-INF/views/error/404.jsp").
-		forward(request, response);
-	}
 	
 	@ExceptionHandler(Exception.class)
 	public void handlerException(
